@@ -1,7 +1,7 @@
 {
     "name": "Hugo (via Homebrew)",
     "id": "hugo-homebrew",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Installs Hugo via Homebrew. Includes the extended version.",
     "options": {
         "version": {
