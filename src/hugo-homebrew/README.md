@@ -1,13 +1,13 @@
 
-# My Favorite Color (color)
+# Hugo (via Homebrew)
 
-A feature to remind you of your favorite color
+Installs Hugo via Homebrew. Includes the extended version.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/color:1": {
+    "ghcr.io/kddresearch/devcontainers-feature/hugo-homebrew:1": {
         "version": "latest"
     }
 }
