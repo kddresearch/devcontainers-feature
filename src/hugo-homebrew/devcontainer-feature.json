@@ -1,0 +1,10 @@
+{
+    "name": "Hugo (via Homebrew)",
+    "id": "hugo-homebrew",
+    "version": "1.0.0",
+    "description": "Installs Hugo via Homebrew. Includes the extended version.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-extra/features/wget-homebrew"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "with_brew": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:1": {
+                "upgradePackages": true
+            },
+            "ghcr.io/devcontainers-extra/features/wget-homebrew:1": {},
+            "hugo-homebrew": {}
+        }
+    },
+    "without_brew": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "hugo-homebrew": {}
+        }
+    }
+}
