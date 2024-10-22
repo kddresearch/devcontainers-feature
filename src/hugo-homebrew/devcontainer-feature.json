@@ -3,8 +3,17 @@
     "id": "hugo-homebrew",
     "version": "1.0.0",
     "description": "Installs Hugo via Homebrew. Includes the extended version.",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
     "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-extra/features/wget-homebrew"
     ]
 }

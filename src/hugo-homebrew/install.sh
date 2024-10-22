@@ -1,14 +1,22 @@
-#!/bin/sh
+#!/bin/bash -i
+
 set -e
 
-echo "Activating feature 'Hugo (Via Homebrew)'"
+source ./library_scripts.sh
 
-if command -v brew >/dev/null 2>&1; then
-    echo "Homebrew is installed."
-else
-    echo "Homebrew is not installed. Please install Homebrew first."
-    echo "Example feature: ghcr.io/devcontainers-extra/features/wget-homebrew"
-    exit 1
-fi
+# nanolayer is a cli utility which keeps container layers as small as possible
+# source code: https://github.com/devcontainers-contrib/nanolayer
+# `ensure_nanolayer` is a bash function that will find any existing nanolayer installations, 
+# and if missing - will download a temporary copy that automatically get deleted at the end 
+# of the script
+ensure_nanolayer nanolayer_location "v0.4.39"
 
-brew install Hugo
+
+$nanolayer_location \
+    install \
+    devcontainer-feature \
+    "ghcr.io/devcontainers-contrib/features/homebrew-package:1" \
+    --option package='hugo' --option version="$VERSION"
+
+
+echo 'Done!'
