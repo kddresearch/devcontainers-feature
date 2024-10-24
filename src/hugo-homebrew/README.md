@@ -11,7 +11,11 @@ Installs Hugo via Homebrew. Includes the extended version.
 }
 ```
 
+## Options
 
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| version | Select the version to install. | string | latest |
 
 
 
