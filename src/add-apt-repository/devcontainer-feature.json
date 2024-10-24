@@ -1,0 +1,16 @@
+{
+    "name": "Add 'add-apt-repository' command",
+    "id": "add-apt-repository",
+    "version": "1.0.0",
+    "description": "Installs the 'add-apt-repository' command with apt.",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    }
+}
