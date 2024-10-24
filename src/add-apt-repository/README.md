@@ -1,0 +1,24 @@
+
+# Add 'add-apt-repository' command (add-apt-repository)
+
+Installs the 'add-apt-repository' command with apt.
+
+## Example Usage
+
+```json
+"features": {
+    "ghcr.io/kddresearch/devcontainers-feature/add-apt-repository:1": {}
+}
+```
+
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| version | Select the version to install. | string | latest |
+
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kddresearch/devcontainers-feature/blob/main/src/add-apt-repository/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
