@@ -1,11 +1,11 @@
 {
-    "with_brew": {
+    "ubuntu-common-utils": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {
                 "upgradePackages": true
             },
-            "hugo-homebrew": {}
+            "databricks-homebrew": {}
         }
     }
 }

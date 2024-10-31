@@ -13,7 +13,9 @@ jobs:
     strategy:
       matrix:
         features:
+          - add-apt-repository
           - hugo-homebrew
+          - databricks-homebrew
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -34,6 +36,7 @@ jobs:
       matrix:
         features:
           - hugo-homebrew
+          - databricks-homebrew
     steps:
       - uses: actions/checkout@v4
 

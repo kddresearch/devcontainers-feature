@@ -14,7 +14,9 @@ ensure_nanolayer nanolayer_location "v0.5.6"
 
 $nanolayer_location \
     install \
-    apt-get \
-    "software-properties-common"
+    devcontainer-feature \
+    "ghcr.io/devcontainers-contrib/features/homebrew-package:1" \
+    --option package='databricks/tap/databricks' \
+    --option version="$VERSION"
 
 echo 'Done!'

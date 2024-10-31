@@ -14,12 +14,13 @@
             },
             "extensions": [
                 "mads-hartmann.bash-ide-vscode",
-                "GitHub.copilot"
+                "GitHub.copilot",
+                "github.vscode-github-actions"
             ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.0": {}
     },
     "remoteUser": "node",
     "updateContentCommand": "npm install -g @devcontainers/cli"
