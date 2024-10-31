@@ -16,8 +16,7 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/homebrew-package:1" \
-    --option tap='databricks/tap' \
-    --option package='databricks' \
+    --option package='databricks/tap/databricks' \
     --option version="$VERSION"
 
 echo 'Done!'
