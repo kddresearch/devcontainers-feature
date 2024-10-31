@@ -1,5 +1,5 @@
-#https://github.com/devcontainers-extra/features/blob/d946acc92748f39f0d4dca08565295c07bc0ee13/archive/src/homebrew-package/install.sh
 #!/usr/bin/env bash
+#https://github.com/devcontainers-extra/features/blob/d946acc92748f39f0d4dca08565295c07bc0ee13/archive/src/homebrew-package/install.sh
 set -ex
 
 source ./library_scripts.sh

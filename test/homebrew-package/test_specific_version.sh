@@ -6,6 +6,6 @@ source dev-container-features-test-lib
 
 check "type node" type node
 
-check "node version is 14"  node --version | grep "v14.*"
+check "node version is 20"  node --version | grep "v20.*"
 
 reportResults

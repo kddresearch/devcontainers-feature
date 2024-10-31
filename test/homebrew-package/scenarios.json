@@ -21,7 +21,7 @@
         "image": "mcr.microsoft.com/devcontainers/base:debian",
         "features": {
             "homebrew-package": {
-                "version": "14",
+                "version": "20",
                 "package": "node"
             }
         }
