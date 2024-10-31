@@ -30,7 +30,7 @@
         "image": "mcr.microsoft.com/devcontainers/base:debian",
         "features": {
             "homebrew-package": {
-                "version": "7.80.0",
+                "version": "latest",
                 "package": "curl"
             }
         }
