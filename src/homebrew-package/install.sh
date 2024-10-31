@@ -7,6 +7,7 @@ source ./library_scripts.sh
 PACKAGE=${PACKAGE:-""}
 VERSION=${VERSION:-"latest"}
 INSTALLATION_FLAGS=${INSTALLATION_FLAGS:-""}
+TAP=${TAP:-""}
 
 if [ -z "$PACKAGE" ]; then
 	echo -e "'package' variable is empty, skipping"
@@ -41,6 +42,7 @@ install_via_homebrew() {
 	package=$1
 	version=$2
 	installation_flags=$3
+    TAP=$4
 
 	# install Homebrew if does not exists
 	if ! type brew >/dev/null 2>&1; then
@@ -70,6 +72,10 @@ install_via_homebrew() {
 	# Solves CVE-2022-24767 mitigation in Git >2.35.2
 	# For more information: https://github.blog/2022-04-12-git-security-vulnerability-announced/
 	git config --system --add safe.directory "$(brew --prefix)/Homebrew/Library/Taps/homebrew/homebrew-core"
+
+    if [ -n "$TAP" ]; then
+        brew tap "$TAP"
+    fi
 
 	su - "$_REMOTE_USER" <<EOF
 		set -e
@@ -114,4 +120,4 @@ install_via_homebrew() {
 EOF
 }
 
-install_via_homebrew "$PACKAGE" "$VERSION" "$INSTALLATION_FLAGS"
+install_via_homebrew "$PACKAGE" "$VERSION" "$INSTALLATION_FLAGS" "$TAP"
