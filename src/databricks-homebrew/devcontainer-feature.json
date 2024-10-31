@@ -1,0 +1,19 @@
+{
+    "name": "Databricks CLI (via Homebrew)",
+    "id": "databricks-homebrew",
+    "version": "1.0.0",
+    "description": "Installs Databricks CLI via Homebrew.",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-extra/features/wget-homebrew"
+    ]
+}
