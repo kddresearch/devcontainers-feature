@@ -1,10 +1,20 @@
-# TODO: Add a check to see if the package is already installed
-# TODO: Add a check to see if apt-get is installed
+#!/bin/bash -i
 
-sudo apt update -y
-sudo apt install software-properties-common -y
+set -e
 
-# if sudo apt-get --simulate install packageThatDoesntExist      
-# then echo "we're good"
-# else echo "oops, something happened"
-# fi
+source ./library_scripts.sh
+
+# nanolayer is a cli utility which keeps container layers as small as possible
+# source code: https://github.com/devcontainers-contrib/nanolayer
+# `ensure_nanolayer` is a bash function that will find any existing nanolayer installations, 
+# and if missing - will download a temporary copy that automatically get deleted at the end 
+# of the script
+ensure_nanolayer nanolayer_location "v0.5.6"
+
+
+$nanolayer_location \
+    install \
+    apt-get \
+    "software-properties-common"
+
+echo 'Done!'

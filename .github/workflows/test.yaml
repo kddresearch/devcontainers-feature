@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - add-apt-repository
           - hugo-homebrew
           - databricks-homebrew
         baseImage:
